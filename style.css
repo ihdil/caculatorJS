@@ -1,0 +1,213 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+min-height: 100vh;
+background: #ffe4e1;
+}
+.container{
+  position: relative;
+  min-width: 300px;
+  min-height: 400px;
+  background: #db7093;
+  padding: 40px 30px 30px;
+  border-radius: 20px;
+  box-shadow:
+25px 25px 75px rgba(0 0 0 0.25)
+10px 10px 70px rgba(0,0,0,0.25),
+inset -5px -5px 15px rgba(0,0,0,0.5),
+inset 5px 5px 15px rgba(0,0,0,0.5);
+}
+.caclulator
+{
+  position: relative;
+  display: grid;
+}
+span
+{
+  color: #fff;
+}
+.caclulator .value
+{
+  position: relative;
+  grid-column:  span 4;
+  height: 100px;
+  left: 10px;
+  width: calc(100% - 30px);
+  border: none;
+  outline: none;
+  background: #a7af7c;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+  text-align: right;
+  padding: 10px;
+  font-size: 2em;
+}
+.caclulator span
+{
+  position:relative;
+  place-items: center;
+  display: grid;
+  width: 80px;
+  height: 80px;
+  margin: 8px;
+  background: linear-gradient(180deg, #ffb6c1 , #db7093);
+  box-shadow:
+inset -8px 0 8px rgba(0,0,0,0.15),
+inset 0px -8px  8px rgba(0,0,0,0.25),
+ 0 0 0 2px rgba(0,0,0,0.75),
+ 10px 20px 25px rgba(0,0,0,0.4);
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 400;
+  border-radius: 10px;
+}
+.caclulator span::before
+{
+  content: ' ';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: 14px;
+  right: 12px;
+  background: linear-gradient(90deg, #f78fa7 , #ff91a4);
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+  10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid #ffb6c1;
+  border-bottom: 1px solid #ffb6c1;
+  border-top: 1px solid #db7093;
+}
+
+.caclulator span: active{ filter: brightness(1.5); }
+.caclulator span i
+{
+  position: relative;
+  font-style: normal;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+body.Light .caclulator span i
+{
+  color: #333;
+}
+body.Light .caclulator span.num-clear i ,
+body.Light .caclulator span.equal i
+{
+  color: #fff;
+}
+body.Light .caclulator .num-clear ,
+.caclulator .num-clear
+{
+grid-column: span 2;
+width: 180px;
+background: red;
+}
+body.Light .caclulator .num-clear::before ,
+.caclulator .num-clear::before
+{
+  background: linear-gradient(90deg, #d20000 , #ffffff5c);
+  border-left: 1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+.caclulator .add
+{
+  grid-row: span 2;
+  height: 180px;
+}
+body.Light .caclulator .equal ,
+.caclulator .equal{
+background: blue;
+}
+body.Light .caclulator .equal::before,
+.caclulator .equal::before{
+  background: linear-gradient(90deg, blue , #ffffff5c);
+  border-left: 1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+body.Light
+{
+  background: #d3d3d3;
+}
+body.Light .container
+{
+background: #f8f8f8;
+box-shadow:
+25px 25px 75px rgba(0 0 0 0.15)
+10px 10px 70px rgba(0,0,0,0.15),
+inset -5px -5px 15px rgba(0,0,0,0.15),
+inset 5px 5px 15px rgba(0,0,0,0.05);
+}
+body.Light .caclulator span
+{
+  background: linear-gradient(90deg, #fafafa , #f4f4f4);
+  box-shadow:
+inset -8px 0 8px rgba(0,0,0,0.15),
+inset 0px -8px  8px rgba(0,0,0,0.15),
+ 0 0 0 2px rgba(0,0,0,1),
+ 10px 20px 25px rgba(0,0,0,0.25);
+}
+body.Light .caclulator span::before
+{
+ background: linear-gradient(90deg, #e6e6e6 , #efefef);
+ border-radius: 10px;
+ box-shadow:
+  -10px -10px 10px rgba(255,255, 255, 0.25),
+ 10px 5px 10px rgba(0, 0, 0, 0.15);
+ border-left: 1px solid #fff4;
+ border-bottom: 1px solid #fff4;
+ border-top: 1px solid #fff9;
+}
+.btn{
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #fc8eac;
+  font-size: 1.5em;
+  box-shadow:
+  5px 5px 15px rgba(0,0,0,0.25),
+  5px 5px 30px rgba(0,0,0,0.25),
+  inset -2px -2px 5px rgba(0,0,0,0.25),
+  inset 2px 2px 5px rgba(0,0,0,0.25);
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+border-radius: 10px;
+}
+
+body.Light .btn{
+background: #f5f5f5;
+box-shadow:
+5px 5px 15px rgba(0,0,0,0.1),
+5px 5px 30px rgba(0,0,0,0.05),
+inset -2px -2px 5px rgba(0,0,0,0.25),
+inset 2px 2px 5px rgba(0,0,0,0.25);
+}
+.btn strong{
+  display: none;
+}
+.btn strong:nth-child(1)
+{
+  display: block;
+}
+body.Light .btn strong:nth-child(1)
+{
+  display: none;
+}
+body.Light .btn strong:nth-child(2)
+{
+  display: block;
+}
